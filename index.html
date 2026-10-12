@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Life Long Contract Scrap</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Dancing+Script:wght@600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<main id="stage">
+
+  <!-- COVER -->
+  <section id="cover" class="screen active" aria-label="Cover">
+    <div class="book floaty">
+      <div class="spiral" aria-hidden="true"></div>
+      <div class="sheet coverSheet">
+        <span class="deco d1">🎀</span><span class="deco d2">✨</span><span class="deco d3">⭐</span>
+        <span class="deco d4">🌸</span><span class="deco d5">💗</span><span class="deco d6">✨</span>
+        <div class="label">
+          <div class="seal" aria-hidden="true">♥</div>
+          <h1>LIFE LONG<br>CONTRACT<br>SCRAP</h1>
+          <p class="subtitle">Jannat &amp; me</p>
+        </div>
+        <button id="openBtn" class="btn big bouncy">Open</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO PAGES 1-12 -->
+  <section id="photos" class="screen" aria-label="Scrapbook pages">
+    <div class="book">
+      <div class="spiral" aria-hidden="true"></div>
+      <div class="sheet" id="sheet">
+        <div id="pageBody" class="pageBody"></div>
+      </div>
+    </div>
+    <nav class="controls" aria-label="Page controls">
+      <button id="backBtn" class="btn" aria-label="Previous page">Back</button>
+      <span id="indicator" class="pill" aria-live="polite">1 / 12</span>
+      <button id="nextBtn" class="btn" aria-label="Next page">Next</button>
+    </nav>
+  </section>
+
+  <!-- FINAL PAGE 13 -->
+  <section id="final" class="screen" aria-label="The Lifetime Contract">
+    <div class="book">
+      <div class="spiral" aria-hidden="true"></div>
+      <div class="sheet lined" id="finalSheet">
+        <div class="contract" id="contract">
+          <div class="ribbon" aria-hidden="true">🎀</div>
+          <h2>The Lifetime Contract</h2>
+          <div id="message"></div>
+          <div class="skipRow"><button id="skipBtn" class="btn small ghost">Skip</button></div>
+          <div id="signBox" class="signBox hidden">
+            <input id="nameInput" type="text" maxlength="30" placeholder="Type your name here" autocomplete="off" aria-label="Type your name to sign">
+            <p id="err" class="err" aria-live="polite"></p>
+            <div class="sigline"><span id="sigText"></span></div>
+            <button id="signBtn" class="btn big pulse">Yes, I'll sign</button>
+            <p id="signedLine" class="signedLine hidden"></p>
+          </div>
+        </div>
+        <div id="stamp" aria-hidden="true">CONTRACT<br>SIGNED</div>
+      </div>
+    </div>
+    <nav class="controls">
+      <button id="reviewBtn" class="btn ghost">Back to the scrapbook</button>
+    </nav>
+  </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
